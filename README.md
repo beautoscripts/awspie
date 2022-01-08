@@ -1,3 +1,3 @@
 # AWSPIE
 
-Manage and Monitor various AWS resources throug CLI
+Manage and Monitor various AWS resources through CLI
