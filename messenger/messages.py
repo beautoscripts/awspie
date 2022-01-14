@@ -17,7 +17,7 @@ class Messengers:
         if msg == "invalid_args":
             error_msg = f"""
 {RED}| Error:{CLOSE} Invalid arguments
-{BLUE}| Info:{CLOSE} Try running awspie -help
+{BLUE}| Info:{CLOSE} Try running sudo awspie -help
             """
             return error_msg
 
@@ -25,7 +25,7 @@ class Messengers:
         if msg == "invalid_awspieconfig":
             error_msg = f"""
 {RED}| Error:{CLOSE} AWSPIE setup configuration missing
-{BLUE}| Info:{CLOSE} Run awspie -setup
+{BLUE}| Info:{CLOSE} Run sudo awspie -setup
             """
             return error_msg
 
@@ -34,8 +34,9 @@ class Messengers:
             help_msg = f"""
 | AWSPIE - Monitor and Manage AWS resources
 {YELLOW}| Usage:{CLOSE}
-       -setup   : setup awspie cli environment
-       -version : print awspie release version
+       -setup           : setup awspie cli environment
+       -create profile  : create aws user profile
+       -version         : print awspie release version
             """
             return help_msg
         
@@ -55,3 +56,11 @@ class Messengers:
 {BLUE}| Info:{CLOSE} Run sudo awspie -setup
             """
             return error_msg
+        
+        # msg: database created
+        if msg == "db_created":
+            db_msg = f"""
+| AWSPIE - Monitor and Manage AWS resources
+{GREEN}|{CLOSE} AWSPIE environment setup done. Create your AWS profile using {YELLOW}'sudo awspie -create profile'{CLOSE}
+            """
+            return db_msg
