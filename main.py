@@ -129,7 +129,15 @@ def main():
                 quit(0)
         # create profile argument
         if args_list[0] == '-create':
-            pass
+            BLUE = "\033[1;34m"
+            CLOSE = "\033[0m"
+            print(f"""| AWSPIE - Monitor and Manage AWS resources\n""")
+            profile_name = input(f"{BLUE}|{CLOSE} Profile Name : ").split()
+            aws_accesskeyid = input(f"{BLUE}|{CLOSE} AWS Access Key Id : ").split()
+            aws_secretaccesskey = input(f"{BLUE}|{CLOSE} AWS Secret Access Key : ").split()
+            aws_region = input(f"{BLUE}|{CLOSE} AWS Region [ Default: us-east-1 ] : ").split()
+        
+
 # Start main
 if __name__ == "__main__":
     main()
